@@ -1,0 +1,16 @@
+.carousel{
+  height: 500px;
+  margin: auto;
+  overflow: hidden;
+  width: 80%;
+
+  .carousel-inner{
+
+    .item{
+
+      img{
+        height: auto;
+      }
+    }
+  }
+}

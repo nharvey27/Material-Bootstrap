@@ -1,0 +1,43 @@
+.nav-tabs{
+  @include shadow-8dp;
+  background-color: $color-primary;
+  border-radius: 2px;
+  border-bottom: none;
+  margin-bottom: 6px;
+  padding: .7rem;
+
+  li{
+    text-align: center;
+    width: 33%;
+
+    a{
+      border: 0px;
+      border-radius: 0px;
+      color:white;
+      font-size: 16px;
+
+      &:hover{
+        background: none;
+      }
+    }
+  }
+
+  li.active{
+    border: none !important;
+    background-color: rgba(255,255,255,.2);
+
+    a{
+      background-color: transparent !important;
+      border: 0px;
+      color:white !important;
+
+      &:hover, &:focus, &:hover{
+        border:none;
+      }
+    }
+  }
+}
+
+.tab-content{
+  padding: 24px;
+}

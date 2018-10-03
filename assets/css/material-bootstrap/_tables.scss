@@ -1,0 +1,27 @@
+.table{
+
+  tbody{
+    font-size: 13px;
+    opacity: .87;
+
+    tr{
+
+      &:hover{
+        background-color: #EEEEEE;
+      }
+
+      thead{
+        font-size: 12px;
+        opacity: .54;
+      }
+
+      td ,th{
+        padding: 10px 15px;
+
+        .fa{
+          font-size: 12px;
+        }
+      }
+    }
+  }
+}

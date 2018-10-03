@@ -1,0 +1,12 @@
+.container .jumbotron{
+  @include shadow-8dp;
+  background-color: white;
+  border-radius: 0px;
+  padding-left: 48px;
+  padding-right: 48px;
+
+  p{
+    font-size: 16px;
+    word-wrap: break-word;
+  }
+}

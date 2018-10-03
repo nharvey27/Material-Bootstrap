@@ -1,0 +1,88 @@
+@mixin input($color){
+  background: transparent;
+  border-radius: 0px;
+  border: none;
+  border-bottom: 1px solid $color;
+  box-shadow: none;
+  font-size: 16px;
+  margin-bottom: 8px;
+  min-height: 48px;
+  opacity: 0.56;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  padding-left: 0px;
+  position: relative;
+
+  &:focus{
+    border-bottom: 1px solid $color;
+    box-shadow: none;
+    opacity: 0.87;
+  }
+}
+
+.form-control{
+  @include input($color-primary);
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+label{
+  font-size: 16px;
+  margin-bottom: 8px;
+  padding-bottom: 8px;
+}
+
+.floating-control-label{
+  font-size: 16px;
+  font-weight: 300;
+  opacity: 0.56;
+  padding:0px;
+  position: relative;
+  top: -40px;
+  z-index: 5;
+}
+
+.floating-input{
+  position: relative;
+  z-index: 10;
+
+  &:focus ~ .floating-control-label{
+    animation: label-move .5s 1 forwards running;
+  }
+}
+
+.input-group{
+  width: 100%;
+}
+
+.form-icon{
+  display: table-cell;
+  font-size: 24px;
+  opacity: .56;
+  position: relative;
+  top: -6px;
+}
+
+.has-success{
+  @include input($color-success);
+}
+
+.has-error{
+  @include input($color-danger);
+}
+
+select.form-control{
+  padding-bottom: 0px;
+}
+
+@keyframes label-move{
+  0%{
+  font-size: 16px;
+  }
+  100%{
+    font-size: 12px;
+    transform: translateY(-20px) translateX(0px) ;
+  }
+}

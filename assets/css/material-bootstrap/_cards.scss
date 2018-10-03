@@ -1,0 +1,122 @@
+.card{
+  @include shadow-2dp;
+  background-color: #fff;
+  border-radius: 2px;
+  display: inline-block;
+  margin-top: 24px;
+  position: relative;
+  perspective: 400px;
+  width: 100%;
+
+
+  .card-image{
+    height: 60%;
+    overflow: hidden;
+    position: relative;
+
+
+    img{
+      border-top-left-radius: 2px;
+      border-top-right-radius: 2px;
+      height: 60%;
+      width: 100%;
+
+
+      &:hover{
+        opacity: .90;
+      }
+    }
+  }
+
+  .card-content{
+    position: relative;
+
+    .overlay{
+      border: 5px solid #fff;
+      border-radius: 50%;
+      box-shadow: none;
+      height: 120px;
+      left: 110px;
+      position: absolute;
+      top: 30%;;
+      width: 120px ;
+      z-index: 10;
+
+      img{
+        height: initial;
+
+        &:hover{
+          opacity: 1;
+        }
+      }
+    }
+
+    .rounded{
+      @include shadow-8dp;
+      border-radius: 50%;
+      height: 140px;
+      margin: auto;
+      margin-bottom: 8px;
+      width: 140px;
+
+      img{
+        height: inherit;
+
+      }
+    }
+
+    .side-raised{
+      @include shadow-8dp;
+      border-radius: 6px;
+      left: -10px;
+      width: 105%;
+      transition: box-shadow 1s $animation-curve-linear-out-slow-in;
+
+      &:hover{
+        @include shadow-16dp;
+      }
+    }
+
+    .above-raised{
+      @include shadow-8dp;
+      border-radius: 6px;
+      width: 92%;
+      left: 14px;
+      top: -16px;
+      transition: box-shadow 1s $animation-curve-linear-out-slow-in;
+
+      &:hover{
+        @include shadow-16dp;
+      }
+    }
+
+  }
+  .raised{
+    text-align: center;
+  }
+
+  .card-body{
+    padding: 24px;
+
+    p{
+      color: #999999;
+      font-size: 14px;
+    }
+  }
+
+  .card-title{
+    border-bottom: 1px solid rgba(0,0,0,.1);
+    font-size: 22px;
+    margin-bottom: 16px;
+    margin-top: 0px;
+    padding-bottom: 6px
+  }
+
+  .card-footer{
+    margin-top: 28px;
+  }
+
+  .center{
+    text-align: center;
+  }
+}

@@ -1,0 +1,113 @@
+@mixin navbar($color) {
+  background-color: $color;
+  border-radius: 0px;
+  padding: 6px 16px;
+
+
+  a{
+    color: white;
+  }
+
+  .navbar-brand{
+    color: white;
+    font-weight: 300;
+  }
+
+  .nav{
+
+    .input-group{
+      display: inline-block;
+      max-height: 50px;
+      top: 6px;
+
+      .form-control{
+        min-height: 0px;
+      }
+    }
+
+    li{
+
+      a{
+        font-size: 14px;
+
+        i.material-icons{
+          font-size: 20px;
+          margin-top: -5px;
+          padding-right: 4px;
+          top: 4px;
+          position: relative;
+        }
+        .fa{
+          padding-right: 6px;
+        }
+        &:hover, &:focus{
+          background: none;
+        }
+      }
+
+      .dropdown-menu{
+        padding: 8px 8px;
+
+        a{
+          font-size: 14px;
+          font-weight: 300;
+          padding: 16px;
+          transition: color .35s $animation-curve-fast-out-slow-in, background-color .35s $animation-curve-fast-out-slow-in;
+
+          &:hover{
+            color: white;
+            background-color: $color;
+          }
+        }
+      }
+    }
+
+    .open{
+
+      a, a:hover, a:focus{
+        background: none;
+      }
+    }
+  }
+}
+
+
+
+
+.navbar-toggle{
+  border: 1px solid #888;
+}
+
+.icon-bar{
+  background-color: #888;
+}
+
+.navbar-default{
+  @include navbar(none);
+  border-radius: 0px;
+  .navbar-brand{color: black;}
+
+  a{
+    text-transform: uppercase;
+  }
+}
+
+.navbar-primary{
+  @include navbar($color-primary);
+}
+
+.navbar-info{
+  @include navbar($color-info);
+}
+
+.navbar-success{
+  @include navbar($color-success);
+}
+
+.navbar-warning{
+  @include navbar($color-warning);
+}
+
+.navbar-danger{
+  @include navbar($color-danger);
+}

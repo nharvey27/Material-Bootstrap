@@ -1,0 +1,38 @@
+@mixin alert($color){
+  @include shadow-2dp;
+  background-color: $color;
+  border: none;
+  border-radius: 0px;
+  color: white;
+  padding: 18px 16px;
+
+  .fa{
+    font-size: 24px;
+    padding-right: 6px;
+  }
+}
+
+.alert-dismissible .close{
+  right: 0px;
+  top: 0px;
+}
+
+.alert-primary{
+  @include alert($color-primary);
+}
+
+.alert-info{
+  @include alert($color-info);
+}
+
+.alert-success{
+  @include alert($color-success);
+}
+
+.alert-warning{
+  @include alert($color-warning);
+}
+
+.alert-danger{
+  @include alert($color-danger);
+}

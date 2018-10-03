@@ -1,0 +1,440 @@
+@mixin btn{
+  border-radius: 2px;
+  min-height: 36px;
+  min-width: 102px;
+  padding-left: 16px ;
+  padding-right: 16px;
+  position: relative;
+  text-transform: uppercase;
+
+  .material-icons{
+    padding-left: 2px;
+    position: relative;
+    top: -2px;
+    vertical-align: middle;
+  }
+
+  .fa{
+    font-size: 20px;
+    padding: 2px;
+  }
+}
+
+@mixin btn-flat($color){
+  @include btn;
+  color: $color;
+  background: transparent;
+
+  &:hover, &:focus{
+    background: rgba(153, 153, 153, 0.2);
+    color: $color
+  }
+}
+
+@mixin btn-raised($color){
+  @include btn;
+  @include shadow-2dp;
+  background-color: $color;
+  color: white;
+  transition: box-shadow 0.2s $animation-curve-fast-out-linear-in,
+            background-color 0.2s $animation-curve-default,
+            color 0.2s $animation-curve-default;
+
+  &:active{
+    @include shadow-8dp;
+  }
+
+  &:focus:not(:active) {
+    @include focus-shadow();
+  }
+
+  &:hover , &:focus{
+    color: white;
+    @include shadow-8dp;
+  }
+}
+
+.btn-floating{
+  border-radius: 50% !important;
+  height: 42px ;
+  min-width: 0px !important;
+  padding: 12px !important;
+  width: 42px ;
+
+  .fa, .material-icons{
+    position: relative;
+    padding: 0px !important;
+    left: -1px;
+    top: -2px;
+  }
+}
+
+.btn-flat-default{
+  @include btn-flat(inherit);
+  opacity: .56;
+}
+
+.btn-flat-primary{
+  @include btn-flat($color-primary);
+}
+
+.btn-flat-info{
+  @include btn-flat($color-info);
+}
+
+.btn-flat-success{
+  @include btn-flat($color-success);
+}
+
+.btn-flat-warning{
+  @include btn-flat($color-warning);
+}
+
+.btn-flat-danger{
+  @include btn-flat($color-danger);
+}
+
+.btn-raised-default{
+  @include btn-raised(inherit);
+  color: #333;
+  opacity: .56;
+
+  &:hover{
+    color: #333;
+  }
+}
+
+.btn-raised-primary{
+  @include btn-raised($color-primary);
+}
+
+.btn-raised-info{
+  @include btn-raised($color-info);
+}
+
+.btn-raised-success{
+  @include btn-raised($color-success);
+}
+
+.btn-raised-warning{
+  @include btn-raised($color-warning);
+}
+
+.btn-raised-danger{
+  @include btn-raised($color-danger);
+}
+
+.btn-raised-red{
+  @include btn-raised($color-red);
+}
+
+.btn-raised-purple{
+  @include btn-raised($color-purple);
+}
+
+.btn-raised-deep-purple{
+  @include btn-raised($color-deep-purple);
+}
+
+.btn-raised-indigo{
+  @include btn-raised($color-indigo);
+}
+
+.btn-raised-blue{
+  @include btn-raised($color-blue);
+}
+
+.btn-raised-light-blue{
+  @include btn-raised($color-light-blue);
+}
+
+.btn-raised-cyan{
+  @include btn-raised($color-cyan);
+}
+
+.btn-raised-teal{
+  @include btn-raised($color-teal);
+}
+
+.btn-raised-green{
+  @include btn-raised($color-green);
+}
+
+.btn-raised-light-green{
+  @include btn-raised($color-light-green);
+}
+
+.btn-raised-lime{
+  @include btn-raised($color-lime);
+}
+
+.btn-raised-yellow{
+  @include btn-raised($color-yellow);
+}
+
+.btn-raised-amber{
+  @include btn-raised($color-amber);
+}
+
+.btn-raised-orange{
+  @include btn-raised($color-orange);
+}
+
+.btn-raised-deep-orange{
+  @include btn-raised($color-deep-orange);
+}
+
+.btn-raised-brown{
+  @include btn-raised($color-brown);
+}
+
+.btn-raised-grey{
+  @include btn-raised($color-grey);
+}
+
+.btn-raised-blue-grey{
+  @include btn-raised($color-blue-grey);
+}
+
+.btn-raised-midnight-blue{
+  @include btn-raised($color-midnight-blue);
+}
+
+.btn-raised-belizehole{
+  @include btn-raised($color-belizehole);
+}
+
+
+.btn-flat-red{
+  @include btn-flat($color-red);
+}
+
+.btn-flat-purple{
+  @include btn-flat($color-purple);
+}
+
+.btn-flat-deep-purple{
+  @include btn-flat($color-deep-purple);
+}
+
+.btn-flat-indigo{
+  @include btn-flat($color-indigo);
+}
+
+.btn-flat-blue{
+  @include btn-flat($color-blue);
+}
+
+.btn-flat-light-blue{
+  @include btn-flat($color-light-blue);
+}
+
+.btn-flat-cyan{
+  @include btn-flat($color-cyan);
+}
+
+.btn-flat-teal{
+  @include btn-flat($color-teal);
+}
+
+.btn-flat-green{
+  @include btn-flat($color-green);
+}
+
+.btn-flat-light-green{
+  @include btn-flat($color-light-green);
+}
+
+.btn-flat-lime{
+  @include btn-flat($color-lime);
+}
+
+.btn-flat-yellow{
+  @include btn-flat($color-yellow);
+}
+
+.btn-flat-amber{
+  @include btn-flat($color-amber);
+}
+
+.btn-flat-orange{
+  @include btn-flat($color-orange);
+}
+
+.btn-flat-deep-orange{
+  @include btn-flat($color-deep-orange);
+}
+
+.btn-flat-brown{
+  @include btn-flat($color-brown);
+}
+
+.btn-flat-grey{
+  @include btn-flat($color-grey);
+}
+
+.btn-flat-blue-grey{
+  @include btn-flat($color-blue-grey);
+}
+
+.btn-flat-midnight-blue{
+  @include btn-flat($color-midnight-blue);
+}
+
+.btn-flat-belizehole{
+  @include btn-flat($color-belizehole);
+}
+
+//social buttons
+
+.btn-raised-facebook{
+  @include btn-raised($color-facebook);
+}
+
+.btn-raised-twitter{
+  @include btn-raised($color-twitter);
+}
+
+.btn-raised-google-plus{
+  @include btn-raised($color-google-plus);
+}
+
+.btn-raised-linkedin{
+  @include btn-raised($color-linkedin);
+}
+
+.btn-raised-skype{
+  @include btn-raised($color-skype);
+}
+
+.btn-raised-youtube{
+  @include btn-raised($color-youtube);
+}
+
+.btn-raised-tumblr{
+  @include btn-raised($color-tumblr);
+}
+
+.btn-raised-medium{
+  @include btn-raised($color-medium);
+}
+
+.btn-raised-reddit{
+  @include btn-raised($color-reddit);
+  .fa{
+    left: -2px;
+  }
+}
+
+.btn-raised-yahoo{
+  @include btn-raised($color-yahoo);
+}
+
+.btn-raised-slack{
+  @include btn-raised($color-slack);
+}
+
+.btn-raised-stack-overflow{
+  @include btn-raised($color-stack-overflow);
+}
+
+.btn-raised-flickr{
+  @include btn-raised($color-flickr);
+}
+
+.btn-raised-github{
+  @include btn-raised($color-github);
+}
+
+
+// Flat social buttons
+
+.btn-flat-facebook{
+  @include btn-flat($color-facebook);
+  min-width: 0px;
+}
+
+.btn-flat-twitter{
+  @include btn-flat($color-twitter);
+  min-width: 0px;
+}
+
+.btn-flat-google-plus{
+  @include btn-flat($color-google-plus);
+  min-width: 0px;
+}
+
+.btn-flat-linkedin{
+  @include btn-flat($color-linkedin);
+  min-width: 0px;
+}
+
+.btn-flat-skype{
+  @include btn-flat($color-skype);
+  min-width: 0px;
+}
+
+.btn-flat-youtube{
+  @include btn-flat($color-youtube);
+  min-width: 0px;
+}
+
+.btn-flat-tumblr{
+  @include btn-flat($color-tumblr);
+  min-width: 0px;
+}
+
+.btn-flat-medium{
+  @include btn-flat($color-medium);
+  min-width: 0px;
+
+}
+
+.btn-flat-reddit{
+  @include btn-flat($color-reddit);
+  min-width: 0px;
+
+  .fa{
+    left: -2px;
+  }
+}
+
+.btn-flat-yahoo{
+  @include btn-flat($color-yahoo);
+  min-width: 0px;
+}
+
+.btn-flat-slack{
+  @include btn-flat($color-slack);
+  min-width: 0px;
+}
+
+.btn-flat-stack-overflow{
+  @include btn-flat($color-stack-overflow);
+  min-width: 0px;
+}
+
+.btn-flat-flickr{
+  @include btn-flat($color-flickr);
+  min-width: 0px;
+}
+
+.btn-flat-github{
+  @include btn-flat($color-github);
+  min-width: 0px;
+}
+
+.btn-flat-email{
+  @include btn-flat($color-purple);
+  min-width: 0px;
+}
+
+.btn-flat-comments{
+  @include btn-flat($color-grey);
+  min-width: 0px;
+}
+
+
+.rounded{
+  border-radius: 32px;
+}

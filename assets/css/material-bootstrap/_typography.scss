@@ -1,0 +1,77 @@
+/* Credit to https://github.com/zavoloklom/material-design-typography */
+
+.typography{
+  font-size: 24px;
+  opacity: .56;
+  text-align: center;
+}
+
+h1{
+  font-size: 34px;
+  font-weight: 300;
+  line-height: 40px;
+  letter-spacing: 0px;
+  color: rgba(0, 0, 0, 0.87);
+}
+
+h2{
+  font-size: 24px;
+  font-weight: 300;
+  line-height: 32px;
+  letter-spacing: 0px;
+  color: rgba(0, 0, 0, 0.87);
+}
+
+h3{
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 24px;
+
+  letter-spacing: 0.1px;
+  color: rgba(0, 0, 0, 0.87);
+}
+
+h4{
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 24px;
+  letter-spacing: 0.1px;
+  color: rgba(0, 0, 0, 0.87);
+}
+
+h5{
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 24px;
+  letter-spacing: 0.1px;
+  color: rgba(0, 0, 0, 0.87);
+}
+
+h6 {
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 20px;
+  font-weight: 400;
+  letter-spacing: 0.1px;
+  color: rgba(0, 0, 0, 0.87);
+}
+
+.primary-text{
+  color: $color-primary;
+}
+
+.info-text{
+  color: $color-info;
+}
+
+.success-text{
+  color: $color-success
+}
+
+.warning-text{
+  color: $color-warning
+}
+
+.danger-text{
+  color: $color-danger
+}

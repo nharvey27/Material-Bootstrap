@@ -1,0 +1,30 @@
+.progress {
+  background: #c8c8c8;
+  border-radius: 0;
+  box-shadow: none;
+  height: 5px;
+
+  .progress-bar {
+    box-shadow: none;
+  }
+}
+
+.progress-primary{
+  background-color: $color-primary;
+}
+
+.progress-info{
+  background-color: $color-info
+}
+
+.progress-success{
+  background-color: $color-success;
+}
+
+.progress-warning{
+  background-color: $color-warning;
+}
+
+.progress-danger{
+  background-color: $color-danger;
+}

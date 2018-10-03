@@ -1,0 +1,27 @@
+.label{
+  border-radius: 10px;
+  font-size: 12px;
+  min-height: 32px;
+  padding-left: 12px;
+  padding-right: 12px;
+}
+
+.label-primary{
+  background-color: $color-primary;
+}
+
+.label-info{
+  background-color: $color-info;
+}
+
+.label-success{
+  background-color: $color-success;
+}
+
+.label-warning{
+  background-color: $color-warning;
+}
+
+.label-danger{
+  background-color: $color-danger;
+}

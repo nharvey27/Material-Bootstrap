@@ -1,0 +1,19 @@
+form{
+  @include shadow-2dp;
+  border-radius: 0px;
+  padding: 24px;
+
+  .form-group{
+    position: relative;
+    display: table;
+    border-collapse: separate;
+    margin-bottom: 0px;
+    width: 100%;
+
+    .form-icon{
+      top: 10px;
+      margin-right: 6px;
+      width: 36px;
+    }
+  }
+}

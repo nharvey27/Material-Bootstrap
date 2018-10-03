@@ -1,0 +1,81 @@
+@import './material-bootstrap/shadows';
+@import './material-bootstrap/animations';
+@import './material-bootstrap/colors';
+
+@import './material-bootstrap/alerts';
+@import './material-bootstrap/badges';
+@import './material-bootstrap/buttons';
+@import './material-bootstrap/button-sizes';
+@import './material-bootstrap/cards';
+@import './material-bootstrap/carousel';
+@import './material-bootstrap/checkbox';
+@import "./material-bootstrap/forms";
+@import "./material-bootstrap/inputs";
+@import './material-bootstrap/jumbotron';
+@import "./material-bootstrap/labels";
+@import './material-bootstrap/modals';
+@import './material-bootstrap/navbars';
+@import './material-bootstrap/pagination';
+@import './material-bootstrap/popups';
+@import './material-bootstrap/progress';
+@import './material-bootstrap/radios';
+@import './material-bootstrap/ripples';
+@import './material-bootstrap/sliders';
+@import './material-bootstrap/tables';
+@import './material-bootstrap/tabs';
+@import './material-bootstrap/typography';
+
+body{
+  background-color: whitesmoke;
+  font-family: 'Roboto', sans-serif;
+
+  .display-body{
+    @include shadow-24dp;
+    background-color: white;
+    border-radius: 4px;
+    height: 100%;
+    margin-bottom: 24px;
+    margin-top: 48px;
+    padding-bottom: 48px;
+  }
+
+}
+
+.row{
+  margin-top: 24px;
+
+  margin-bottom: 48px;
+  h1{
+    margin-bottom: 48px;
+  }
+}
+
+span + *{
+  display: inline-block;;
+}
+.col-md-12{
+  margin-bottom: 24px;
+}
+
+.col-md-10{
+  text-align: center;
+  .btn{
+    margin-top: 12px;
+    margin-left: 4px;
+  }
+}
+.center-header{
+  text-align: center;
+}
+
+.pagi, .badge-container, .label-container{
+  text-align: center;
+}
+
+h1, h2{
+  margin-bottom: 48px;
+}
+
+h1 ~ span.label, .btn{
+  margin: 0px 4px;
+}
